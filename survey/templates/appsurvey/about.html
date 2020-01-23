@@ -1,0 +1,15 @@
+{% extends 'appsurvey/base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+  <form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+
+  <a href="thankyou"><input type="submit" class='btn btn-success' value="Submit"></a>
+  </form>
+
+</div>
+{%endblock%}
