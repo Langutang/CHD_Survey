@@ -18,7 +18,12 @@ DRESSSHORT_CHOICES = (
     ('No', 'No'),
 )
 
-ATTEND_CHOICES = (
+ATTEND1_CHOICES = (
+    ('Yes', 'Yes'),
+    ('No', 'No'),
+)
+
+ATTEND2_CHOICES = (
     ('Yes', 'Yes'),
     ('No', 'No'),
 )
@@ -28,7 +33,8 @@ class Survey(models.Model):
     restriction = models.CharField(max_length = 65, choices = RESTRICTION_CHOICES)
     jeans = models.CharField(max_length = 65, choices = JEANS_CHOICES)
     dressshort = models.CharField(max_length = 65, choices = DRESSSHORT_CHOICES)
-    attend = models.CharField(max_length = 65, choices = ATTEND_CHOICES)
+    attendjeans = models.CharField(max_length = 65, choices = ATTEND1_CHOICES)
+    attendshorts = models.CharField(max_length = 65, choices = ATTEND2_CHOICES)
     date = models.DateTimeField(default = timezone.now())
 
     def __str__(self):
